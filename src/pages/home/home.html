@@ -3,38 +3,18 @@
     <ion-title>
       Ionic Blank
     </ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="toggleReorder()">
-        Edit
-      </button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content fullscreen>
-
-  <ion-list [reorder]="shouldReorder" (ionItemReorder)="$event.applyTo(people)">
-
-    <ion-item-sliding *ngFor="let person of people">
-      <ion-item>
-        <ion-avatar item-left>
-
-          <img [src]="person.picture.thumbnail" alt="">
-        </ion-avatar>
-        {{person.name.first}} {{person.name.last}}
-        <ion-note item-right>{{person.phone}}</ion-note>
-      </ion-item>
-      <ion-item-options side="right">
-        <button ion-button color="danger" icon-only>
-        <ion-icon name="archive"></ion-icon>
-      </button>
-      </ion-item-options>
-      <ion-item-options side="left">
-        <button ion-button color="secondary" icon-only>
-        <ion-icon name="flag"></ion-icon>
-      </button>
-      </ion-item-options>
-    </ion-item-sliding>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-left>
+        <img [src]="person.picture.thumbnail" alt="">
+      </ion-avatar>
+      {{person.name.first}} {{person.name.last}}
+      <ion-note item-right>{{person.phone}}</ion-note>
+    </ion-item>
 
   </ion-list>
 
