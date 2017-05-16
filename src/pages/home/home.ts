@@ -15,17 +15,12 @@ import {
 })
 
 export class HomePage {
-  public people = [];
+  public people = this.service.getPeople()
   public shouldReorder = false;
   constructor(
     public navCtrl: NavController,
     public service: People,
-  ) {
-    this.service.getPeople()
-      .subscribe(
-      data => this.people = data.results
-      )
-  }
+  ) {}
   toggleReorder() {
     this.shouldReorder = !this.shouldReorder
   }
