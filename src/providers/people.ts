@@ -9,7 +9,7 @@ export class People {
   }
 
   getPeople(){
-    return this.http.get('https://randomuser.me/api/?results=300')
+    return this.http.get('https://randomuser.me/api/?results=3')
     .map(res => res.json())
   }
 

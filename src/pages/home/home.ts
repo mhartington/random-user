@@ -26,22 +26,6 @@ export class HomePage {
       data => this.people = data.results
       )
   }
-  doInfinite(e) {
-    this.service.getPeople()
-      .subscribe(
-      data => this.people.push(...data.results),
-      err => console.log(err),
-      () => e.complete()
-      )
-  }
-  doRefresh(e) {
-    this.service.getPeople()
-      .subscribe(
-      data => this.people.unshift(...data.results),
-      err => console.log(err),
-      () => e.complete()
-      )
-  }
   toggleReorder() {
     this.shouldReorder = !this.shouldReorder
   }
