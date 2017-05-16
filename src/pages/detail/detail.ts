@@ -13,9 +13,6 @@ export class DetailPage {
     public navCtrl: NavController,
     public navParams: NavParams,
   ) {
-    setTimeout(() => {
-      this.navCtrl.pop()
-    }, 2000);
   }
 
   ionViewDidLoad() {
