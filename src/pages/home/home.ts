@@ -51,14 +51,13 @@ export class HomePage {
   }
 
   pushPage(user) {
-    // this.modalCtrl.create(DetailPage, user).present()
-    this.navCtrl.push(DetailPage, user)
-    // this.navCtrl.setPages([
-    //   {page: HomePage},
-    //   {page: DetailPage, params: this.people[5]},
-    //   {page: HomePage},
-    //   {page: DetailPage, params: user}
-    // ])
+    // this.navCtrl.push(DetailPage, user)
+    this.navCtrl.setPages([
+      {page: HomePage},
+      {page: DetailPage, params: this.people[5]},
+      {page: HomePage},
+      {page: DetailPage, params: user}
+    ])
   }
 
 }
