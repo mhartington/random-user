@@ -3,12 +3,10 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {People} from '../providers/people'
-import {DetailPage} from '../pages/detail/detail'
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    DetailPage
+    HomePage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -18,8 +16,7 @@ import {DetailPage} from '../pages/detail/detail'
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    DetailPage
+    HomePage
   ],
   providers: [
     People,

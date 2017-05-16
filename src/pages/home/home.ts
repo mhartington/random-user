@@ -8,9 +8,7 @@ import {
 import {
   People
 } from '../../providers/people'
-import {
-  DetailPage
-} from '../detail/detail'
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -46,10 +44,6 @@ export class HomePage {
   }
   toggleReorder() {
     this.shouldReorder = !this.shouldReorder
-  }
-
-  pushPage(user) {
-    this.navCtrl.push(DetailPage, user)
   }
 
 }
